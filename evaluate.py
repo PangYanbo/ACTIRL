@@ -8,6 +8,7 @@ plt.style.use('ggplot')
 
 
 def eva(qlr,irlr):
+def main():
     demo = []
     sim = []
 
@@ -56,6 +57,7 @@ def eva(qlr,irlr):
         plt.ylim(0, 1)
         plt.legend()
         plt.title(state_idx[str(i)])
+
     plt.savefig('eva_'+str(qlr)+'_'+str(irlr)+'.png')
 
 
@@ -64,6 +66,7 @@ def main():
 
     for p in param:
         eva(p[0], p[1])
+
 
 if __name__ == '__main__':
     main()
